@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "author": "Steffanus Wiedjaja",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-arduino-uno",
+      "id": "uno",
+      "top": -3,
+      "left": -65.8,
+      "rotate": 90,
+      "attrs": {}
+    },
+    { "type": "wokwi-ds1307", "id": "rtc1", "top": 23.4, "left": 297.7, "attrs": {} }
+  ],
+  "connections": [
+    [ "rtc1:SDA", "uno:A4.2", "green", [ "h0" ] ],
+    [ "uno:A5.2", "rtc1:SCL", "green", [ "h115.2", "v19.2" ] ],
+    [ "rtc1:GND", "uno:GND.1", "black", [ "h-115.2", "v38.4" ] ],
+    [ "rtc1:5V", "uno:5V", "red", [ "h-96", "v-106", "h-259.2", "v182.4" ] ]
+  ],
+  "dependencies": {}
+}
